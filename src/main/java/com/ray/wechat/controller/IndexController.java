@@ -14,8 +14,6 @@ public class IndexController {
 	@Autowired
 	private BookServers bookServers;
 	
-	 
-	
 	@RequestMapping("hello2")
 	@ResponseBody
 	public String index(

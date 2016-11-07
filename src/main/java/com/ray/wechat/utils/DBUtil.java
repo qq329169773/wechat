@@ -47,12 +47,10 @@ public class DBUtil {
 		insertRow.put("user_name", "zhangsan");
 		insertRow.put("age", 12);
 		String sql = insertSql(insertRow, "users");
-		System.out.println(sql);
 	}
 	
  	public Long insert(final DBRow insertRow ,final String table_name){
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		
 		
  		jdbcTemplate.update(new PreparedStatementCreator(){
            @Override
