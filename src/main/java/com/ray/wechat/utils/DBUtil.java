@@ -25,8 +25,6 @@ public class DBUtil {
 	
 	private static String insertSql(DBRow insertRow,String table_name){
 		
-	 
-		
  		StringBuffer sql = new StringBuffer();
 		Iterator<Entry<String, Object>> it = insertRow.entrySet().iterator();
 		sql.append("insert into ").append(table_name);
