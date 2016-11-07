@@ -1,1 +1,2 @@
 *.class    #过滤所有.class文件
+/target/
