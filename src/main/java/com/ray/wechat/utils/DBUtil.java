@@ -49,7 +49,6 @@ public class DBUtil {
 	
  	public Long insert(final DBRow insertRow ,final String table_name){
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		
  		jdbcTemplate.update(new PreparedStatementCreator(){
            @Override
            public PreparedStatement createPreparedStatement(Connection conn) throws SQLException{
