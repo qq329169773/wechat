@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ray.wechat.servers.BookServers;
 
+
 @Controller
 public class IndexController {
 
