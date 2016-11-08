@@ -29,7 +29,6 @@ public class IndexController {
 		bookServers.addBook();
 		return "success" ;
 	}
-	
 	@RequestMapping("add.html")
 	public String add(){
 		return "wechat/add" ;
