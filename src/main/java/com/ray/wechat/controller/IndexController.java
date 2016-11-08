@@ -12,6 +12,9 @@ import com.ray.wechat.servers.BookServers;
 @Controller
 public class IndexController {
 
+	
+	
+	
 
 	@Autowired
 	private BookServers bookServers;
