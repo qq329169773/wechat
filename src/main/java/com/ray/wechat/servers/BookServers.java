@@ -33,9 +33,9 @@ public class BookServers {
 			 throw new RuntimeException();
 		 }
 	}
-	public static void main(String[] args){
+/*	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		BookServers bookServers = applicationContext.getBean(BookServers.class);
 		bookServers.addBook();
-	}
+	}*/
 }

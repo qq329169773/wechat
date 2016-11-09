@@ -14,7 +14,9 @@
  	
  	 <context:property-placeholder location="classpath:*.properties"/>
 	<!-- 自动扫描包 -->
-	<context:component-scan base-package="com.ray" />
+	<context:component-scan base-package="com.ray" >
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+	</context:component-scan>
 
  	 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
