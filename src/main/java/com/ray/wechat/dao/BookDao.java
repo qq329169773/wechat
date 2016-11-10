@@ -17,4 +17,7 @@ public class BookDao {
 	public Long addBook(DBRow insertRow){
 		return dbUtil.insert(insertRow, "books");
 	}
+	public Integer updateBookById(String whereCase , String tableName, DBRow updateRow){
+		return dbUtil.update(whereCase, tableName, updateRow);
+	}
 }

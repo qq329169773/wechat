@@ -20,4 +20,8 @@ public class DBRow{
 		return (T) data.get(key);
 	}
 	
+	public Integer size(){
+		return data.size() ;
+	}
+	
 }

@@ -17,7 +17,17 @@ public class BookServers {
 
 	@Autowired
 	private BookDao bookDao ;
-
+	
+	
+	public void updateBook(){
+		DBRow updateRow = new DBRow();
+		updateRow.put("book_name", "京东发展历史11111");
+		updateRow.put("book_title", "京东发展历史1111");
+		updateRow.put("book_price", 10.21D);
+		Integer result = bookDao.updateBookById("where book_id = 1", "books", updateRow);
+		System.out.println("update result : " + result);
+	}
+	
  	public void addBook(){
 		DBRow insertRow = new DBRow();
 		insertRow.put("book_name", "京东发展历史");
@@ -33,9 +43,10 @@ public class BookServers {
 			 throw new RuntimeException();
 		 }
 	}
-/*	public static void main(String[] args){
+ 	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		BookServers bookServers = applicationContext.getBean(BookServers.class);
-		bookServers.addBook();
-	}*/
+		//bookServers.addBook();
+		bookServers.updateBook();
+	}
 }
