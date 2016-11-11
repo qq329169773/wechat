@@ -196,6 +196,4 @@ public class DBUtil {
 		return jdbcTemplate.query(sql, pss, new DBRowMapper());
 	}
 	
-	public void f(){
-	}
 }
