@@ -1,23 +1,38 @@
 package com.ray.wechat.dao;
 
+import com.ray.wechat.utils.BasicDao;
+import com.ray.wechat.utils.DBRow;
+import com.ray.wechat.utils.DBUtil;
+import com.ray.wechat.utils.HoldDoubleValue;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.ray.wechat.utils.DBRow;
-import com.ray.wechat.utils.DBUtil;
-
 @Repository
-public class BookDao {
+public class BookDao extends BasicDao {
 	
 	
 	@Autowired
 	private DBUtil dbUtil ;
-	
-	
-	public Long addBook(DBRow insertRow){
-		return dbUtil.insert(insertRow, "books");
+
+	@Override
+	protected DBUtil getDBUtil() {
+		return dbUtil;
 	}
-	public Integer updateBookById(String whereCase , String tableName, DBRow updateRow){
-		return dbUtil.update(whereCase, tableName, updateRow);
+
+	@Override
+	protected HoldDoubleValue<String, String> getTableNameAndPrimaryKey() {
+		return new HoldDoubleValue<String, String>("books","book_id");
+	}
+	
+	public List<DBRow> queryTest(){
+		return dbUtil.selectMutiPre("select * from books", null);
+	}
+	public DBRow findById(Long id){
+		DBRow params = new DBRow();
+		params.put("book_price", 10.2);
+		return dbUtil.selectSingle("select * from books where book_price = 10.2   " );
 	}
 }

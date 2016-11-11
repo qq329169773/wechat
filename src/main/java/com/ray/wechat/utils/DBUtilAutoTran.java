@@ -1,3 +1,4 @@
+/*
 package com.ray.wechat.utils;
 
 import java.io.BufferedReader;
@@ -27,6 +28,7 @@ import com.cwc.transaction.TransactionThread;
 import com.cwc.app.util.ConfigBean;
 import com.cwc.app.util.StrUtil;
 
+*/
 /**
  * 2008.07.16
  * @author turboshop
@@ -36,29 +38,34 @@ import com.cwc.app.util.StrUtil;
  * 使用spring后，事务中的数据库连接由spring的事务关闭
  * 
  * 
- */
+ *//*
+
 public class DBUtilAutoTran  implements DBUtilIFace
 {
 	static Logger log = Logger.getLogger("DB");
 	private boolean deBugFlag = false;
     protected DataSource dataSource;									//由容器注入spring datasource
     
-    /**
+    */
+/**
      * 初始化一个数据库管理器
      * @throws Exception
-     */
+     *//*
+
     public DBUtilAutoTran()
             throws Exception
     {
     }
 
-    /**
+    */
+/**
      * 插入记录
      * @param tablename			表名
      * @param data				数据
      * @return
      * @throws Exception
-     */
+     *//*
+
     public boolean insert(String tablename, DBRow data)
         throws Exception
      {
@@ -316,14 +323,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	 }
      
 
-    /**
+    */
+/**
      * 更新表
      * @param wherecond			条件语句
      * @param tablename			表名
      * @param data				更新的数据
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int update(String wherecond, String tablename, DBRow data)
 	    throws Exception
 	{
@@ -331,7 +340,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    return c;
 	}
     
-    /**
+    */
+/**
      * 预备声明方式更新数据
      * @param wherecond
      * @param para
@@ -339,7 +349,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
      * @param data
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int updatePre(String wherecond,DBRow para, String tablename, DBRow data)
 	    throws Exception
 	{
@@ -347,7 +358,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    return c;
 	}
     
-    /**
+    */
+/**
      * 预备声明方式更新数据
      * @param wherecond
      * @param para
@@ -356,14 +368,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
      * @param clean
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int updatePre(String wherecond, DBRow para,String tablename, DBRow data,boolean clean)
 	    throws Exception
 	{
 	    return(0);
 	}
     
-    /**
+    */
+/**
      * 更新表
      * @param wherecond			条件语句
      * @param tablename			表名
@@ -371,7 +385,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
      * @param clean				是否立即清除缓存（true-立即）
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int update(String wherecond, String tablename, DBRow data,boolean clean)
         throws Exception
     {
@@ -503,13 +518,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 
     } 
     
-    /**
+    */
+/**
      * 删除记录
      * @param wherecond			条件语句
      * @param tablename			表名
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int delete(String wherecond, String tablename)
         throws Exception
     {
@@ -559,14 +576,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
         return num;
     }
     
-    /**
+    */
+/**
      * 预备声明方式删除
      * @param wherecond
      * @param tablename
      * @param para
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int deletePre(String wherecond,DBRow para, String tablename)
 	    throws Exception
 	{
@@ -633,13 +652,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
     
     
 
-    /**
+    */
+/**
      * 把检索结果转换为DBROW并计算翻页
      * @param rs				检索结果
      * @param pageCtrl			翻页类
      * @return
      * @throws Exception
-     */
+     *//*
+
     private DBRow[] getResultsMap(ResultSet rs, PageCtrl pageCtrl)
           throws Exception
       {
@@ -765,13 +786,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
           return results;
       }
 
-//    /**
+//    */
+/**
 //     * 单返回结果集查询（带缓存）
 //     * @param sql
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow selectSingleCache(String sql,String tablenames[])
 //	    throws Exception
 //	{
@@ -801,12 +824,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
 
-    /**
+    */
+/**
      * 单返回结果集查询
      * @param sql
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow selectSingle(String sql)
         throws SQLException
     {
@@ -828,14 +853,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
         }
     }
     
-//    /**
+//    */
+/**
 //     * 使用预备声明单结果集查询（带缓存）
 //     * @param sql								
 //     * @param para					参数
 //     * @param tablenames			表
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow selectPreSingleCache(String sql,DBRow para,String tablenames[])
 //	    throws Exception
 //	{
@@ -861,13 +888,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
 
-    /**
+    */
+/**
      * 使用预备声明单结果集查询
      * @param sql
      * @param para
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow selectPreSingle(String sql,DBRow para)
 	    throws SQLException
 	{
@@ -893,14 +922,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    }
 	}
 
-//    /**
+//    */
+/**
 //     * 使用预备声明多结果集查询（带缓存）
 //     * @param sql
 //     * @param para
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow[] selectPreMutlipleCache(String sql,DBRow para,String tablenames[])
 //	    throws Exception
 //	{
@@ -928,20 +959,23 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
     
-    /**
+    */
+/**
      * 使用预备声明多结果集查询
      * @param sql
      * @param para
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow[] selectPreMutliple(String sql,DBRow para)
 	    throws SQLException
 	{
 	    return selectPreMutliple(sql,para,null);
 	}
     
-//    /**
+//    */
+/**
 //     * 使用预备声明多结果集带翻页查询（带缓存）
 //     * @param sql
 //     * @param para
@@ -949,7 +983,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow[] selectPreMutlipleCache(String sql,DBRow para,PageCtrl pc,String tablenames[])
 //	    throws Exception
 //	{
@@ -1001,14 +1036,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
 
-    /**
+    */
+/**
      * 使用预备声明多结果集带翻页查询
      * @param sql
      * @param para
      * @param pc
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow[] selectPreMutliple(String sql,DBRow para,PageCtrl pc)
 	    throws SQLException
 	{
@@ -1107,13 +1144,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    return results;
 	}
     
-//    /**
+//    */
+/**
 //     * 多结果集查询（带缓存）
 //     * @param sql
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow[] selectMutlipleCache(String sql,String tablenames[])
 //	    throws Exception
 //	{
@@ -1141,26 +1180,30 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
 
-    /**
+    */
+/**
      * 多结果集查询
      * @param sql
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow[] selectMutliple(String sql)
         throws SQLException
     {
         return selectMutliple(sql, null);
     }
 
-//    /**
+//    */
+/**
 //     * 多结果集查询（带缓存）
 //     * @param sql
 //     * @param pc
 //     * @param tablenams
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow[] selectMutlipleCache(String sql,PageCtrl pc,String tablenams[])
 //	    throws Exception
 //	{
@@ -1204,14 +1247,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
     
-//    /**
+//    */
+/**
 //     * 获得一定数量结果集查询（带缓存）
 //     * @param sql
 //     * @param count
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //    public DBRow[] selectMutlipleCacheByCount(String sql,int count,String tablenames[])
 //	    throws Exception
 //	{
@@ -1258,7 +1303,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
 	
-//    /**
+//    */
+/**
 //     * 使用预备声明获得一定结果集查询（带缓存）
 //     * @param sql
 //     * @param para
@@ -1266,7 +1312,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //     * @param tablenames
 //     * @return
 //     * @throws Exception
-//     */
+//     *//*
+
 //	public DBRow[] selectPreMutlipleCacheByCount(String sql,DBRow para,int count,String tablenames[])
 //	    throws Exception
 //	{
@@ -1313,13 +1360,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		}
 //	}
     
-	/**
+	*/
+/**
 	 * 带翻页多结果集查询
 	 * @param sql
 	 * @param pc
 	 * @return
 	 * @throws SQLException
-	 */
+	 *//*
+
 	public DBRow[] selectMutliple(String sql, PageCtrl pc)
         throws SQLException
     {
@@ -1357,14 +1406,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
         return data;
     }
 
-	/**
+	*/
+/**
 	 * 使用预备声明获得一定结果集查询
 	 * @param sql
 	 * @param para
 	 * @param count
 	 * @return
 	 * @throws SQLException
-	 */
+	 *//*
+
     public DBRow[] selectPreMutlipleByCount(String sql,DBRow para,int count)
 	    throws SQLException
 	{
@@ -1383,13 +1434,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    }
 	}
 
-    /**
+    */
+/**
      * 获得一定数量结果集查询
      * @param sql
      * @param count
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow[] selectMutlipleByCount(String sql,int count)
 	    throws SQLException
 	{
@@ -1408,14 +1461,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	    }
 	}
     
-    /**
+    */
+/**
      * 通用查询带翻页，带order by
      * @param table
      * @param orderBy		格式：order by id asc或 id asc
      * @param pc
      * @return
      * @throws SQLException
-     */
+     *//*
+
     private DBRow[] select(String table, String orderBy, PageCtrl pc)
         throws SQLException
     {
@@ -1431,37 +1486,43 @@ public class DBUtilAutoTran  implements DBUtilIFace
         return selectMutliple("select * from " + table + " " + orderByStr + " " + orderBy, pc);
     }
 
-    /**
+    */
+/**
      * 通用查询带order by
      * @param sql
      * @param orderBy 格式：order by id asc或 id asc
      * @return
      * @throws SQLException
-     */
+     *//*
+
     private DBRow[] select(String sql, String orderBy)
         throws SQLException
     {
         return select(sql, orderBy, null);
     }
 
-    /**
+    */
+/**
      * 通用查询
      * @param sql
      * @return
      * @throws SQLException
-     */
+     *//*
+
     public DBRow[] select(String tableName)
         throws SQLException
     {
         return select(tableName, null, null);
     }
 
-    /**
+    */
+/**
      * 把ResultSet转换为dbfield，设置字段名和字段数据类型
      * @param rs
      * @return
      * @throws Exception
-     */
+     *//*
+
     private DBObjectType[] getFieldInfos(ResultSet rs)
         throws Exception
       {
@@ -1502,12 +1563,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
           return dbField;
       }
 
-    /**
+    */
+/**
      * 把ResultSet转换为dbfield，设置字段名和字段数据类型
      * @param tablename
      * @return
      * @throws Exception
-     */
+     *//*
+
 //    public ll1l11ll1l1l1111111111[] getFieldInfos(String tablename)
 //        throws Exception
 //      {
@@ -1542,10 +1605,12 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //                  dbField2.setFieldName(rsmd.getColumnName(i));
 //                  int sqlDataType = rsmd.getColumnType(i);
 //
-//                  /*
+//                  */
+/*
 //                  System.out.println("fieldname:" + ll1l11ll1l1l1ll11ll1111l1l1l1l1.getFieldName());
 //                  System.out.println("fieldtype:" + ll11ll11l1l1ll1l11l11l1l1l1l1l1l);
-//                  */
+//                  *//*
+
 //
 //                  dbField2.setFieldType( getInnerDataType(sqlDataType) );
 //                  dbField[i - 1] = dbField2;
@@ -1565,11 +1630,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //          return dbField;
 //      }
 
-    /**
+    */
+/**
      * 内部数据库字段类型转换
      * @param ll11ll11l1l1ll1l11l11l1l1l1l1l1l
      * @return
-     */
+     *//*
+
     private int getInnerDataType(int ll11ll11l1l1ll1l11l11l1l1l1l1l1l)
        {
            int innerDataType = -1;
@@ -1622,12 +1689,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
            return innerDataType;
        }
 
-    /**
+    */
+/**
      * 关闭数据库连接等
      * @param rs
      * @param stmt
      * @param conn
-     */
+     *//*
+
     protected void closeConn(ResultSet rs, Statement stmt, Connection conn)
     {
         try
@@ -1719,11 +1788,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
     }
     
     
-    /**
+    */
+/**
      * 判断字符串是否为空
      * @param str
      * @return
-     */
+     *//*
+
    private boolean isBlank(String str)
     {
         if( (str == null) || (str.trim().length() == 0))
@@ -1736,13 +1807,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
         }
     }
 
-   /**
+   */
+/**
     * 把hashmap转换为dbrow
     * @param hashMap
     * @param tablename
     * @return
     * @throws Exception
-    */
+    *//*
+
 //    public DBRow hashMap2DBRow(HashMap hashMap, String tablename)
 //        throws Exception
 //    {
@@ -1795,12 +1868,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //        }
 //    }
 
-    /**
+    */
+/**
      * 获得字段类型
      * @param fieldName
      * @param dbField
      * @return
-     */
+     *//*
+
     private int getFieldType(String fieldName, DBObjectType[] dbField)
     {
         int fieldType = 0;
@@ -1829,27 +1904,31 @@ public class DBUtilAutoTran  implements DBUtilIFace
 
     }
     
-    /**
+    */
+/**
      * 更新数据
      * @param where			条件
      * @param msql			a=a+1
      * @param table
      * @throws Exception
-     */
+     *//*
+
     public void update(String where,String msql,String table)
     	throws Exception
     {
     	update(where,msql,table,true);
     }
     
-    /**
+    */
+/**
      * 更新数据(可控制是否马上清空缓存)
      * @param where				条件
      * @param msql				a=a+1
      * @param table
      * @param clean				true为马上清空
      * @throws Exception
-     */
+     *//*
+
     public void update(String where,String msql,String table,boolean clean)
 		throws Exception
 	{
@@ -1883,11 +1962,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得所有表名
      * @return
      * @throws Exception
-     */
+     *//*
+
 	public ArrayList getTableNames()
 		throws Exception
 	{
@@ -1919,12 +2000,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 获得sequence
 	 * @param tablename
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public long getSequance(String tablename)
 		throws Exception
 	{
@@ -1992,12 +2075,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 
-	/**
+	*/
+/**
 	 * 判断当前表的sequence是否存在
 	 * @param tablename
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	private boolean sequanceIsExist(String tablename)
 		throws Exception
 	{
@@ -2021,12 +2106,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 
-	/**
+	*/
+/**
 	 * ��sequance��把表的sequence加1
 	 * @param tablename
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	private long increaseSequance(String tablename)
 		throws Exception
 	{
@@ -2043,12 +2130,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * �½�创建sequence
 	 * @param tablename
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	private long createSequance(String tablename)
 		throws Exception
 	{
@@ -2067,11 +2156,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 
-	/**
+	*/
+/**
 	 * 获得数据库类型
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getDatabaseType()
 		throws Exception
 	{
@@ -2135,7 +2226,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 //		return(true);
 //	}
 
-	/**
+	*/
+/**
 	 * �½�为某字段值加N
 	 * @param table
 	 * @param where
@@ -2143,7 +2235,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	 * @param val
 	 * @param clean
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void increaseFieldVal(String table,String where,String field,long val,boolean clean)
 		throws Exception
 	{
@@ -2158,7 +2251,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 
-	/**
+	*/
+/**
 	 * �½�为某字段值减N
 	 * @param table
 	 * @param where
@@ -2166,7 +2260,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	 * @param val
 	 * @param clean
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void decreaseFieldVal(String table,String where,String field,long val,boolean clean)
 		throws Exception
 	{
@@ -2182,13 +2277,15 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 根据表名，参数和翻页数据生成sql key，用来作为结果集缓存key
 	 * @param table
 	 * @param para
 	 * @param pc
 	 * @return
-	 */
+	 *//*
+
     private String makeSqlKey(String table,DBRow para,PageCtrl pc)
     {
     	String key = table;
@@ -2217,11 +2314,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
     	return(key);
     }
 	
-    /**
+    */
+/**
      * 安装程序批量导入SQL
      * @param sql
      * @throws Exception
-     */
+     *//*
+
     public void batchUpdate(String sql[])
 		throws Exception
 	{
@@ -2257,11 +2356,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 安装程序使用
      * @param sql
      * @throws Exception
-     */
+     *//*
+
     public void updateInstallSQL(String sql)
 		throws Exception
 	{
@@ -2287,11 +2388,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得数据库主版本
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int getDBMajorVersion()
 		throws Exception
 	{
@@ -2314,11 +2417,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得数据库子版本
      * @return
      * @throws Exception
-     */
+     *//*
+
     public int getDBMinorVersion()
 		throws Exception
 	{
@@ -2340,11 +2445,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得数据库版本
      * @return
      * @throws Exception
-     */
+     *//*
+
     public String getDBVersion()
 		throws Exception
 	{
@@ -2367,11 +2474,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得数据库名称
      * @return
      * @throws Exception
-     */
+     *//*
+
     public String getDBName()
 		throws Exception
 	{
@@ -2393,11 +2502,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 获得所有表名
      * @return
      * @throws Exception
-     */
+     *//*
+
     public ArrayList getAllTables()
 		throws Exception
 	{
@@ -2433,7 +2544,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-    /**
+    */
+/**
      * 为某字段加N
      * @param table
      * @param where
@@ -2441,7 +2553,8 @@ public class DBUtilAutoTran  implements DBUtilIFace
      * @param val
      * @param clean
      * @throws Exception
-     */
+     *//*
+
 	public void increaseFieldVal(String table,String where,String field,double val,boolean clean)
 		throws Exception
 	{
@@ -2456,12 +2569,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
     
-	/**
+	*/
+/**
 	 * 获得某个表的ResultSetMetaData
 	 * @param tbName
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public ResultSetMetaData getTableResultSetMetaData(String tbName)
 		throws Exception
 	{
@@ -2489,11 +2604,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
         }		
 	}
 	
-	/**
+	*/
+/**
 	 * 获得DatabaseMetaData
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public DatabaseMetaData getDatabaseMetaData()
 		throws Exception
 	{
@@ -2516,14 +2633,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 增加数值字段的值
 	 * @param table
 	 * @param where
 	 * @param field
 	 * @param val
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void increaseFieldVal(String table,String where,String field,double val)
 		throws Exception
 	{
@@ -2552,14 +2671,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 减少数值字段的值
 	 * @param table
 	 * @param where
 	 * @param field
 	 * @param val
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void decreaseFieldVal(String table,String where,String field,double val)
 		throws Exception
 	{
@@ -2588,14 +2709,16 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 加减数值字段的值
 	 * @param table
 	 * @param where
 	 * @param field
 	 * @param val 正数为加，负数为减
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void addSubFieldVal(String table,String where,String field,double val)
 		throws Exception
 	{
@@ -2624,12 +2747,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * 调用存储过程
 	 * @param proName
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public CallableStatement CallStringSingleResultProcedure(String proName)
 		throws Exception
 	{
@@ -2677,12 +2802,14 @@ public class DBUtilAutoTran  implements DBUtilIFace
 	
 	
 	
-	/**
+	*/
+/**
 	 * 获得MYSQL创建表SQL
 	 * @param tbName
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getMysqlCreateTableSQL(String tbName)
 		throws Exception
 	{
@@ -2832,11 +2959,13 @@ public class DBUtilAutoTran  implements DBUtilIFace
     
    
     
-    /**
+    */
+/**
      * 直接执行SQL语句
      * @param sql
      * @throws SQLException
-     */
+     *//*
+
     public void executeSQL(String sql)
     	throws SQLException
     {
@@ -2969,3 +3098,4 @@ public class DBUtilAutoTran  implements DBUtilIFace
 
 
 
+*/
