@@ -140,11 +140,13 @@ public class DBUtil {
 	}
 
 	/**
+	 * pre 方式查询单条记录
+	 * 
 	 * @param sql
 	 * @param params
 	 * @return
 	 */
-	public DBRow selectSingle(String sql, DBRow params) {
+	public DBRow selectSinglePre(String sql, DBRow params) {
 		List<DBRow> results = selectMutiPre(sql, params);
 		if (results == null || results.size() == 0) {
 			return null;
@@ -155,10 +157,16 @@ public class DBUtil {
 		return results.get(0);
 	}
 
+	/**
+	 * 查询单条记录
+	 * 
+	 * @param sql
+	 * @return
+	 */
 	public DBRow selectSingle(String sql) {
-		List<Map<String,Object>> results = jdbcTemplate.queryForList(sql);
- 		if(results == null || results.size() < 1){
-			return null ;
+		List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
+		if (results == null || results.size() < 1) {
+			return null;
 		}
 		if (results.size() > 1) {
 			throw new DBUtilException("查询到多条数据");
@@ -166,6 +174,13 @@ public class DBUtil {
 		return new DBRow(results.get(0));
 	}
 
+	/**
+	 * pre 方式查询多条记录
+	 * 
+	 * @param sql
+	 * @param params
+	 * @return
+	 */
 	public List<DBRow> selectMutiPre(final String sql, final DBRow params) {
 		PreparedStatementSetter pss = new PreparedStatementSetter() {
 			@Override
@@ -180,5 +195,7 @@ public class DBUtil {
 		};
 		return jdbcTemplate.query(sql, pss, new DBRowMapper());
 	}
-
+	
+	public void f(){
+	}
 }

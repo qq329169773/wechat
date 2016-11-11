@@ -61,7 +61,7 @@ public abstract class BasicDao {
 	public DBRow selectEntryById(Long id) {
 		DBRow params = new DBRow();
 		params.put(primaryKey(), id);
-		return getDBUtil().selectSingle("SELECT * FROM " + tableName() + " WHERE " + primaryKey() + " = ? ", params);
+		return getDBUtil().selectSinglePre("SELECT * FROM " + tableName() + " WHERE " + primaryKey() + " = ? ", params);
 	}
 	/**
 	 * 查询一个List
