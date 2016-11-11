@@ -1,6 +1,9 @@
-package com.ray.wechat.utils;
+package com.ray.basic.data;
 
 import java.util.List;
+
+import com.ray.basic.model.DBRow;
+import com.ray.basic.model.HoldDoubleValue;
 
 /**
  * Created by zhangrui25 on 2016/11/11.

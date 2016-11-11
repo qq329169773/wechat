@@ -1,10 +1,12 @@
-package com.ray.wechat.utils;
+package com.ray.basic.data;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
+
+import com.ray.basic.model.DBRow;
 
 public class DBRowMapper implements RowMapper<DBRow> {
 	

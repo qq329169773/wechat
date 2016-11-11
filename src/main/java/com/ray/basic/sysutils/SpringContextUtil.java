@@ -1,4 +1,4 @@
-package com.ray.wechat.utils;
+package com.ray.basic.sysutils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package com.ray.wechat.utils;
+package com.ray.basic.data;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +16,11 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+
+import com.ray.basic.exceptions.DBUtilException;
+import com.ray.basic.model.DBRow;
+import com.ray.basic.model.HoldDoubleValue;
+import com.ray.basic.sysutils.SystemStringUtil;
 
 @Repository
 public class DBUtil {

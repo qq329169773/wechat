@@ -1,4 +1,4 @@
-package com.ray.wechat.utils;
+package com.ray.basic.sysutils;
 
 /**
  * Created by zhangrui25 on 2016/11/11.

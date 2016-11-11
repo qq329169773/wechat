@@ -1,4 +1,4 @@
-package com.ray.wechat.utils;
+package com.ray.basic.model;
 
 public class HoldDoubleValue<A,B> {
 

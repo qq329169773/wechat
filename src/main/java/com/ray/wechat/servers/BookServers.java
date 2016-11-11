@@ -8,10 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.ray.basic.data.BasicDao;
+import com.ray.basic.data.BasicServers;
+import com.ray.basic.model.DBRow;
 import com.ray.wechat.dao.BookDao;
-import com.ray.wechat.utils.BasicDao;
-import com.ray.wechat.utils.BasicServers;
-import com.ray.wechat.utils.DBRow;
 
 @Service("bookServers")
 @Transactional

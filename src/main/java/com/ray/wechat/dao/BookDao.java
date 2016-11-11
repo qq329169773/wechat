@@ -1,9 +1,9 @@
 package com.ray.wechat.dao;
 
-import com.ray.wechat.utils.BasicDao;
-import com.ray.wechat.utils.DBRow;
-import com.ray.wechat.utils.DBUtil;
-import com.ray.wechat.utils.HoldDoubleValue;
+import com.ray.basic.data.BasicDao;
+import com.ray.basic.data.DBUtil;
+import com.ray.basic.model.DBRow;
+import com.ray.basic.model.HoldDoubleValue;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.ray.wechat.utils;
+package com.ray.basic.model;
 
 import java.util.Collection;
 import java.util.HashMap;
