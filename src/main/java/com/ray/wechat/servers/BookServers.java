@@ -1,6 +1,7 @@
 package com.ray.wechat.servers;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -10,7 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ray.basic.data.BasicDao;
 import com.ray.basic.data.BasicServers;
+import com.ray.basic.data.DBUtil;
 import com.ray.basic.model.DBRow;
+import com.ray.basic.model.PageCtrl;
+import com.ray.basic.sysutils.SystemStringUtil;
 import com.ray.wechat.dao.BookDao;
 
 @Service("bookServers")
@@ -20,11 +24,14 @@ public class BookServers extends BasicServers{
 	@Autowired
 	private BookDao bookDao ;
 
+	@Autowired
+	private DBUtil dbUtil;
+	
 	@Override
 	protected BasicDao getBasicDao(){
 		return  bookDao;
 	}
-
+	
 	public void updateBook(){
 		DBRow updateRow = new DBRow();
 		updateRow.put("book_name", "京东发展历史11111");
@@ -54,11 +61,6 @@ public class BookServers extends BasicServers{
  	}
  	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-		BookServers bookServers = applicationContext.getBean(BookServers.class);
-		//bookServers.addBook();
- 		System.out.println(bookServers.findRecordById(18L));
- 		DBRow params = new DBRow();
- 		params.put("book_price", "20");
-		System.out.println(bookServers.findRecords("SELECT book_name FROM books WHERE book_price < ? ", params ));;
- 	}
+		final DBUtil dbUtil = applicationContext.getBean(DBUtil.class);
+  	}
 }

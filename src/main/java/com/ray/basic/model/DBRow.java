@@ -44,10 +44,29 @@ public class DBRow{
 	public <T> T getValue(String key){
 		return (T) data.get(key);
 	}
-	
 	public Integer size(){
 		return data.size() ;
 	}
+	
+	public Long getLong(String key){
+		if(data.containsKey(key)){
+			Object value = data.get(key);
+			if(value != null){
+				return Long.parseLong(value.toString());
+			}
+		}
+		return null ;
+	}
+	public Integer getInteger(String key){
+		if(data.containsKey(key)){
+			Object value = data.get(key);
+			if(value != null){
+				return Integer.parseInt(value.toString());
+			}
+		}
+		return null ;
+	}
+	
 	@Override
 	public String toString() {
  		return data.toString();
