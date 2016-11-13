@@ -36,4 +36,20 @@ public class IndexController {
 	public String add(){
 		return "wechat/add" ;
 	}
+	@RequestMapping("index2.html")
+	public String index2(){
+		return "wechat/index2";
+	}
+	@RequestMapping("top.html")
+	public String top(){
+		return "wechat/top";
+	}
+	@RequestMapping("left.html")
+	public String left(){
+		return "wechat/left";
+	}
+	@RequestMapping("right.html")
+	public String right(){
+		return "wechat/right";
+	}
 }
