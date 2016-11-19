@@ -6,6 +6,7 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -62,5 +63,6 @@ public class BookServers extends BasicServers{
  	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		final DBUtil dbUtil = applicationContext.getBean(DBUtil.class);
+	 
   	}
 }
