@@ -63,7 +63,8 @@ public class BookServers extends BasicServers{
  	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		RedisClientTemplate redisClientTemplate = applicationContext.getBean(RedisClientTemplate.class);
-		String value =  redisClientTemplate.set("name","sssss");
-		System.out.println("value : " +  value );
+		boolean value =  redisClientTemplate.set("name","sssss");
+		//Long result = redisClientTemplate.addLeftList("products","item-1","item-2","item-3");
+		System.out.println("value : " +  redisClientTemplate.getListAll("products") );
   	}
 }
