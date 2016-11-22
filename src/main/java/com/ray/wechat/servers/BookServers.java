@@ -3,6 +3,7 @@ package com.ray.wechat.servers;
 import java.util.List;
 import java.util.Random;
 
+import com.ray.basic.data.RedisClientTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -61,6 +62,8 @@ public class BookServers extends BasicServers{
  	}
  	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-		final DBUtil dbUtil = applicationContext.getBean(DBUtil.class);
+		RedisClientTemplate redisClientTemplate = applicationContext.getBean(RedisClientTemplate.class);
+		String value =  redisClientTemplate.set("name","sssss");
+		System.out.println("value : " +  value );
   	}
 }

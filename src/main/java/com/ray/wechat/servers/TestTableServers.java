@@ -23,6 +23,7 @@ public class TestTableServers extends BasicServers{
 	protected BasicDao getBasicDao() {
  		return testTableDao;
 	}
+
 	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 		TestTableServers testTableServers = applicationContext.getBean(TestTableServers.class);

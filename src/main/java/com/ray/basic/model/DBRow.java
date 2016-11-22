@@ -19,7 +19,7 @@ public class DBRow{
 	}
 	
 	public DBRow(Map map){
-		data = new LinkedHashMap<>(map);
+		data = new LinkedHashMap<String,Object>(map);
 	}
 	public void put(String key , Object value){
 		data.put(key, value);
