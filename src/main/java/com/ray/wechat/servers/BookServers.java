@@ -1,9 +1,8 @@
 package com.ray.wechat.servers;
 
 import java.util.List;
-import java.util.Random;
 
-import com.ray.basic.data.RedisClientTemplate;
+import com.ray.basic.data.redis.RedisClientStringTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,8 +13,6 @@ import com.ray.basic.data.BasicDao;
 import com.ray.basic.data.BasicServers;
 import com.ray.basic.data.DBUtil;
 import com.ray.basic.model.DBRow;
-import com.ray.basic.model.PageCtrl;
-import com.ray.basic.sysutils.SystemStringUtil;
 import com.ray.wechat.dao.BookDao;
 
 @Service("bookServers")
@@ -62,7 +59,7 @@ public class BookServers extends BasicServers{
  	}
  	public static void main(String[] args){
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-		RedisClientTemplate redisClientTemplate = applicationContext.getBean(RedisClientTemplate.class);
+		RedisClientStringTemplate redisClientTemplate = applicationContext.getBean(RedisClientStringTemplate.class);
 		boolean value =  redisClientTemplate.set("name","sssss");
 		//Long result = redisClientTemplate.addLeftList("products","item-1","item-2","item-3");
 		System.out.println("value : " +  redisClientTemplate.getListAll("products") );

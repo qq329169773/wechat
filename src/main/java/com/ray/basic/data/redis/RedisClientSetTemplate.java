@@ -1,5 +1,6 @@
-package com.ray.basic.data;
+package com.ray.basic.data.redis;
 
+import com.ray.basic.data.RedisDataSource;
 import com.ray.basic.exceptions.RedisOperationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,8 +11,8 @@ import java.util.List;
 /**
  * Created by zhangrui25 on 2016/11/22.
  */
-@Repository("redisClientTemplate")
-public class RedisClientTemplate {
+@Repository("redisClientSetTemplate")
+public class RedisClientSetTemplate {
 
     private final static String SET_OK = "OK";
 
