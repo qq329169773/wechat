@@ -62,6 +62,6 @@ public class BookServers extends BasicServers{
 		RedisClientStringTemplate redisClientTemplate = applicationContext.getBean(RedisClientStringTemplate.class);
 		boolean value =  redisClientTemplate.set("name","sssss");
 		//Long result = redisClientTemplate.addLeftList("products","item-1","item-2","item-3");
-		System.out.println("value : " +  redisClientTemplate.getListAll("products") );
+		//System.out.println("value : " +  redisClientTemplate.getListAll("products") );
   	}
 }

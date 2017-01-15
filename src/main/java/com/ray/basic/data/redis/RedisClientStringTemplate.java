@@ -12,26 +12,11 @@ import java.util.List;
 /**
  * Created by zhangrui25 on 2016/11/22.
  */
-abstract class ExecuteCommand<T> {
-    public abstract T execute(RedisDataSource redisDataSource);
-    public T doExecute(){
 
-    }
-}
 
 @Repository("redisClientStringTemplate")
 public class RedisClientStringTemplate {
 
-    public Object af(){
-        try{
-            ExecuteCommand e ;
-            e.execute()
-        }catch (Exception e){
-
-        }finally {
-
-        }
-    }
 
     private final static String SET_OK = "OK";
 
@@ -60,13 +45,6 @@ public class RedisClientStringTemplate {
         boolean broken = false;
         try {
             result =   shardedJedis.set(key, value);
-            new ExecuteCommand<Boolean>(){
-                @Override
-                public Boolean execute(RedisDataSource redisDataSource) {
-                    redisDataSource.getRedisClient().get(key);
-                    return null;
-                }
-            } ;
         } catch (Exception e) {
             e.printStackTrace();
             broken = true;
