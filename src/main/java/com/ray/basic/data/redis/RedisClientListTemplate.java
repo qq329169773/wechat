@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * Created by zhangrui25 on 2016/11/22.
  */
-@Repository("redisClientListTemplate")
+/*@Repository("redisClientListTemplate")*/
 public class RedisClientListTemplate {
 
     private final static String SET_OK = "OK";
 
-    @Autowired
+   /* @Autowired*/
     private RedisDataSource redisDataSource;
 
     public void disconnect() {

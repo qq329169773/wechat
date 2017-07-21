@@ -11,7 +11,9 @@ import redis.clients.jedis.ShardedJedisPool;
 /**
  * Created by zhangrui25 on 2016/11/22.
  */
+/*
 @Repository("redisDataSource")
+*/
 public class RedisDataSourceImpl implements RedisDataSource {
 
     @Autowired

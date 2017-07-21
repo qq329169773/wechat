@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 
-@Repository("redisClientStringTemplate")
+/*@Repository("redisClientStringTemplate")*/
 public class RedisClientStringTemplate {
 
 
